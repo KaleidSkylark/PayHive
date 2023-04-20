@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/topViewProfile"
+        android:layout_width="409dp"
+        android:layout_height="119dp"
+        android:background="@drawable/profile_rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/navigation_rectangle"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    <View
+        android:id="@+id/balance_bar"
+        android:layout_width="370dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/balance_rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topViewProfile" />
+
+    <View
+        android:id="@+id/coins_bar"
+        android:layout_width="370dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/coins_rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balance_bar" />
+
+    <TextView
+        android:id="@+id/textProfileView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo"
+        android:text="My Wallet"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="@id/topViewProfile"
+        app:layout_constraintStart_toStartOf="@id/topViewProfile"
+        app:layout_constraintEnd_toEndOf="@id/topViewProfile"
+        android:layout_marginTop="35dp"/>
+
+    <ImageView
+        android:id="@+id/imageProfileButton"
+        android:layout_width="65dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="@id/topViewProfile"
+        app:layout_constraintTop_toTopOf="@id/topViewProfile"
+        app:srcCompat="@drawable/profile" />
+
+    <ImageView
+        android:id="@+id/imageProfilePic"
+        android:layout_width="65dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="@id/topViewProfile"
+        app:layout_constraintTop_toTopOf="@id/topViewProfile"
+        app:srcCompat="@drawable/profilepic" />
+
+    <TextView
+        android:id="@+id/texttotalbalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="90dp"
+        android:fontFamily="@font/baloo"
+        android:text="Total Balance"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/balance_bar"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="@+id/balance_bar"
+        app:layout_constraintTop_toTopOf="@+id/balance_bar" />
+
+    <TextView
+        android:id="@+id/textstonks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="90dp"
+        android:fontFamily="@font/baloo"
+        android:text="+46.54%"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:background="@drawable/bg_rounded_green"
+        app:layout_constraintEnd_toEndOf="@+id/balance_bar"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="@+id/balance_bar"
+        app:layout_constraintTop_toTopOf="@+id/balance_bar"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="90dp"
+        android:fontFamily="@font/baloo"
+        android:text="₱ 369,543.00"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/balance_bar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/balance_bar"
+        app:layout_constraintTop_toTopOf="@+id/balance_bar" />
+
+
+
+    <ImageView
+        android:id="@+id/imageViewarrow1"
+        android:layout_width="20dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="5dp"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="@+id/balance_bar"
+        app:layout_constraintEnd_toEndOf="@+id/balance_bar"
+        app:srcCompat="@drawable/arrow" />
+
+    <ImageView
+        android:id="@+id/imageViewarrow2"
+        android:layout_width="20dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="40dp"
+        android:rotation="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/arrow"
+        tools:layout_editor_absoluteY="309dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageViewarrow3"
+        android:layout_width="20dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="40dp"
+        android:rotation="180"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/arrow"
+        tools:layout_editor_absoluteY="309dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/baloo"
+        android:text="Sort by"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewarrow2"
+        app:layout_constraintTop_toBottomOf="@+id/balance_bar" />
+
+    <TextView
+        android:id="@+id/textViewSort3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:fontFamily="@font/baloo"
+        android:text="Last 24h"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewarrow3"
+        app:layout_constraintTop_toBottomOf="@+id/balance_bar" />
+
+    <ImageButton
+        android:id="@+id/ibStats"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ibWallet"
+        app:layout_constraintTop_toTopOf="@+id/navigation_bar"
+        app:srcCompat="@drawable/stats"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/ibWallet"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/navigation_bar"
+        app:layout_constraintStart_toStartOf="@+id/navigation_bar"
+        app:layout_constraintTop_toTopOf="@+id/navigation_bar"
+        app:srcCompat="@drawable/wallet"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/ibDiscover"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ibStats"
+        app:layout_constraintTop_toTopOf="@+id/navigation_bar"
+        app:srcCompat="@drawable/discover"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/ibSettings"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/navigation_bar"
+        app:layout_constraintStart_toEndOf="@+id/ibDiscover"
+        app:layout_constraintTop_toTopOf="@+id/navigation_bar"
+        app:srcCompat="@drawable/settings"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/ivBitcoin"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="@+id/coins_bar"
+        app:layout_constraintTop_toTopOf="@+id/coins_bar"
+        app:srcCompat="@drawable/bitcoin" />
+
+    <ImageView
+        android:id="@+id/ivEth"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="@+id/coins_bar"
+        app:layout_constraintTop_toBottomOf="@+id/ivBitcoin"
+        app:srcCompat="@drawable/eth" />
+
+    <ImageView
+        android:id="@+id/ivDogecoin"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="@+id/coins_bar"
+        app:layout_constraintTop_toBottomOf="@+id/ivEth"
+        app:srcCompat="@drawable/dogecoin" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/baloo"
+        android:text="0.00941654"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/ivBitcoin"
+        app:layout_constraintTop_toTopOf="@+id/coins_bar" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/baloo"
+        android:text="0.10001325"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/ivEth"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/baloo"
+        android:text="10,654.21"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/ivDogecoin"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/baloo"
+        android:text="₱ 105,631.12"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/baloo"
+        android:text="₱ 48,385.30"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/baloo"
+        android:text="₱ 35,120.22"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textView1"
+        app:layout_constraintTop_toTopOf="@+id/coins_bar" />
+
+
+</android.support.constraint.ConstraintLayout>
+
