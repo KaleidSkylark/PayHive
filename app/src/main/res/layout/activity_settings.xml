@@ -8,18 +8,21 @@
     tools:context=".SettingsActivity">
 
     <!-- Top View -->
+
+
     <View
-        android:id="@+id/topViewProfile"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/V_Header"
+        android:layout_width="410dp"
+        android:layout_height="202dp"
         android:background="@drawable/profile_rectangle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textProfileView"
+        android:id="@+id/tv_HeaderText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
@@ -27,10 +30,10 @@
         android:text="Profile"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@id/topViewProfile"
-        app:layout_constraintStart_toStartOf="@id/topViewProfile"
-        app:layout_constraintTop_toTopOf="@id/topViewProfile" />
-
+        app:layout_constraintEnd_toEndOf="@id/V_Header"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toStartOf="@+id/V_Header"
+        app:layout_constraintTop_toTopOf="@id/V_Header" />
 
     <ImageButton
         android:id="@+id/imageButtonBack"
@@ -41,22 +44,52 @@
         android:background="@android:color/transparent"
         android:rotation="270"
         android:scaleType="fitCenter"
-        app:layout_constraintStart_toStartOf="@+id/topViewProfile"
-        app:layout_constraintTop_toTopOf="@+id/topViewProfile"
+        app:layout_constraintStart_toStartOf="@+id/V_Header"
+        app:layout_constraintTop_toTopOf="@+id/V_Header"
         app:srcCompat="@drawable/arrow"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <!-- Body -->
-    <View
-        android:id="@+id/ProfileBanner"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/balance_rectangle"
+
+    <ImageView
+        android:id="@+id/iv_ProfilePic"
+        android:layout_width="61dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/V_Header"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topViewProfile" />
+        app:layout_constraintTop_toTopOf="@+id/V_Header"
+        app:layout_constraintVertical_bias="0.628"
+        app:srcCompat="@drawable/profilepic" />
+
+    <TextView
+        android:id="@+id/tv_ProfileEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/baloo"
+        android:text="janabajab.234539@bacoor.sti.edu.ph"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/V_Header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_ProfilePic"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_ProfileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo"
+        android:text="Xerx Skylark"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_ProfileEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_ProfilePic"
+        app:layout_constraintVertical_bias="0.0" />
 
     <RelativeLayout
         android:id="@+id/navigation_bar"
@@ -112,5 +145,358 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
     </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/ScrollViewSettings"
+        android:layout_width="309dp"
+        android:layout_height="413dp"
+        android:background="@drawable/settings_rectangle"
+        app:layout_constraintBottom_toTopOf="@+id/navigation_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/V_Header"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/ll_Settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_GeneralSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo"
+                android:text="General Settings"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/EditProfile"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/iv_EditProfile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/editprofile" />
+
+                <TextView
+                    android:id="@+id/tv_Edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:text="Edit Profile"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/iv_RightArrowEdit"
+                    android:layout_width="32dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="110dp"
+                    android:background="@android:color/transparent"
+                    android:rotation="90"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/arrow"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/DarkProfile"
+                android:layout_width="281dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/iv_DarkMode"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/darkmode" />
+
+                <TextView
+                    android:id="@+id/tv_DarkMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:text="Dark/Light"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <Switch
+                    android:id="@+id/DarkModeSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:textColor="#F8F8F8"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LanguageProfile"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/iv_LanguageProfile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/language" />
+
+                <TextView
+                    android:id="@+id/tv_Language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:text="Language"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/iv_RightArrowLanguage"
+                    android:layout_width="32dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="130dp"
+                    android:background="@android:color/transparent"
+                    android:rotation="90"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/arrow"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/AboutProfile"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/iv_AboutProfile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/about" />
+
+                <TextView
+                    android:id="@+id/tv_About"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:text="About"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/iv_RightArrowAbout"
+                    android:layout_width="32dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="145dp"
+                    android:background="@android:color/transparent"
+                    android:rotation="90"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/arrow"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/TOSProfile"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/iv_TOSProfile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/termsandcondi" />
+
+                <TextView
+                    android:id="@+id/tv_TOS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:text="Terms and Conditions"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
+
+                <ImageButton
+                    android:id="@+id/iv_RightArrowTOS"
+                    android:layout_width="32dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="50dp"
+                    android:background="@android:color/transparent"
+                    android:rotation="90"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/arrow"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/PrivacyProfile"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/iv_PrivacyProfile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/privacy" />
+
+                <TextView
+                    android:id="@+id/tv_Privacy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:text="Privacy Policy"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/iv_RightArrowPrivacy"
+                    android:layout_width="32dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="95dp"
+                    android:background="@android:color/transparent"
+                    android:rotation="90"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/arrow"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/RateProfile"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/iv_RateProfile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/rate" />
+
+                <TextView
+                    android:id="@+id/tv_Rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:text="Rate This App"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/iv_RightArrowRate"
+                    android:layout_width="32dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="85sp"
+                    android:background="@android:color/transparent"
+                    android:rotation="90"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/arrow"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ShareProfile"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/iv_ShareProfile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/share" />
+
+                <TextView
+                    android:id="@+id/tv_Share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:text="Share This App"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/iv_RightArrowShare"
+                    android:layout_width="32dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="75sp"
+                    android:background="@android:color/transparent"
+                    android:rotation="90"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/arrow"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
 </android.support.constraint.ConstraintLayout>

@@ -25,4 +25,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="Background">#252525</color>
+    <color name="primaryColor">#3f51b5</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="divider">#B6B6B6</color>
 </resources>

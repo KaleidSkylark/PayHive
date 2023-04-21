@@ -8,50 +8,36 @@
     android:background="@color/Background"
     tools:context=".WalletActivity">
 
-    <View
-        android:id="@+id/topViewProfile"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/profile_rectangle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textProfileView"
+    <android.support.constraint.Group
+        android:id="@+id/DogecoinGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:fontFamily="@font/baloo"
-        android:text="My Wallet"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@id/topViewProfile"
-        app:layout_constraintStart_toStartOf="@id/topViewProfile"
-        app:layout_constraintTop_toTopOf="@id/topViewProfile" />
+        app:constraint_referenced_ids="iv_Dogecoin,tv_ValueDogecoin,tv_PesosDogecoin" />
 
-    <ImageView
-        android:id="@+id/imageProfileButton"
-        android:layout_width="65dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintEnd_toEndOf="@id/topViewProfile"
-        app:layout_constraintTop_toTopOf="@id/topViewProfile"
-        app:srcCompat="@drawable/profile" />
+    <android.support.constraint.Group
+        android:id="@+id/BitcoinGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="iv_Bitcoin,tv_ValueBitcoin,tv_PesosBitcoin" />
 
-    <ImageView
-        android:id="@+id/imageProfilePic"
-        android:layout_width="65dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintStart_toStartOf="@id/topViewProfile"
-        app:layout_constraintTop_toTopOf="@id/topViewProfile"
-        app:srcCompat="@drawable/profilepic" />
+    <android.support.constraint.Group
+        android:id="@+id/EthGroup"
+        android:layout_width="9dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="iv_Eth,tv_ValueEth,tv_PesosEth"
+        tools:layout_editor_absoluteY="140dp" />
 
+    <android.support.constraint.Group
+        android:id="@+id/HeaderGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="V_Header,tv_HeaderText,ib_HeaderButton,iv_HeaderPic" />
 
+    <android.support.constraint.Group
+        android:id="@+id/BalanceGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="V_BalanceSection,tv_TotalBal,tv_TotalBalance,tv_BalStonks,iv_BalArrow" />
     <RelativeLayout
         android:id="@+id/navigation_bar"
         android:layout_width="match_parent"
@@ -107,8 +93,57 @@
 
     </RelativeLayout>
 
+
     <View
-        android:id="@+id/balance_bar"
+        android:id="@+id/V_Header"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/profile_rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_HeaderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/baloo"
+        android:text="My Wallet"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@id/V_Header"
+        app:layout_constraintStart_toStartOf="@id/V_Header"
+        app:layout_constraintTop_toTopOf="@id/V_Header" />
+
+    <ImageView
+        android:id="@+id/iv_HeaderPic"
+        android:layout_width="65dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="@id/V_Header"
+        app:layout_constraintTop_toTopOf="@id/V_Header"
+        app:srcCompat="@drawable/profilepic" />
+
+
+    <ImageButton
+        android:id="@+id/ib_HeaderButton"
+        android:layout_width="52dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/V_Header"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toEndOf="@+id/tv_HeaderText"
+        app:layout_constraintTop_toTopOf="@+id/V_Header"
+        app:srcCompat="@drawable/profile"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <View
+        android:id="@+id/V_BalanceSection"
         android:layout_width="319dp"
         android:layout_height="132dp"
         android:layout_marginStart="50dp"
@@ -117,10 +152,10 @@
         android:background="@drawable/balance_rectangle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topViewProfile" />
+        app:layout_constraintTop_toBottomOf="@+id/V_Header" />
 
     <TextView
-        android:id="@+id/texttotalbalance"
+        android:id="@+id/tv_TotalBal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -130,14 +165,14 @@
         android:text="Total Balance"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/balance_bar"
+        app:layout_constraintEnd_toEndOf="@+id/V_BalanceSection"
         app:layout_constraintHorizontal_bias="0.087"
-        app:layout_constraintStart_toStartOf="@+id/balance_bar"
-        app:layout_constraintTop_toTopOf="@+id/balance_bar" />
+        app:layout_constraintStart_toStartOf="@+id/V_BalanceSection"
+        app:layout_constraintTop_toTopOf="@+id/V_BalanceSection" />
 
 
     <TextView
-        android:id="@+id/textstonks"
+        android:id="@+id/tv_BalStonks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -148,14 +183,14 @@
         android:text="+46.54%"
         android:textColor="#FFFFFF"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/balance_bar"
+        app:layout_constraintEnd_toEndOf="@+id/V_BalanceSection"
         app:layout_constraintHorizontal_bias="0.155"
-        app:layout_constraintStart_toStartOf="@+id/balance_bar"
-        app:layout_constraintTop_toTopOf="@+id/balance_bar"
+        app:layout_constraintStart_toStartOf="@+id/V_BalanceSection"
+        app:layout_constraintTop_toTopOf="@+id/V_BalanceSection"
         tools:ignore="TextContrastCheck" />
 
     <TextView
-        android:id="@+id/textBalance"
+        android:id="@+id/tv_TotalBalance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
@@ -164,18 +199,18 @@
         android:text="₱ 369,543.00"
         android:textColor="#FFFFFF"
         android:textSize="35sp"
-        app:layout_constraintEnd_toEndOf="@+id/balance_bar"
-        app:layout_constraintTop_toTopOf="@+id/balance_bar" />
+        app:layout_constraintEnd_toEndOf="@+id/V_BalanceSection"
+        app:layout_constraintTop_toTopOf="@+id/V_BalanceSection" />
 
     <ImageView
-        android:id="@+id/imageViewarrow1"
+        android:id="@+id/iv_BalArrow"
         android:layout_width="20dp"
         android:layout_height="15dp"
         android:layout_marginEnd="148dp"
         android:layout_marginBottom="8dp"
         android:rotation="180"
-        app:layout_constraintBottom_toBottomOf="@+id/balance_bar"
-        app:layout_constraintEnd_toEndOf="@+id/balance_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/V_BalanceSection"
+        app:layout_constraintEnd_toEndOf="@+id/V_BalanceSection"
         app:srcCompat="@drawable/arrow" />
 
     <View
@@ -189,10 +224,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/balance_bar" />
+        app:layout_constraintTop_toBottomOf="@+id/V_BalanceSection" />
 
     <ImageView
-        android:id="@+id/ivBitcoin"
+        android:id="@+id/iv_Bitcoin"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginStart="8dp"
@@ -202,27 +237,17 @@
         app:srcCompat="@drawable/bitcoin" />
 
     <ImageView
-        android:id="@+id/ivEth"
+        android:id="@+id/iv_Eth"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="22dp"
         app:layout_constraintStart_toStartOf="@+id/coins_bar"
-        app:layout_constraintTop_toBottomOf="@+id/ivBitcoin"
+        app:layout_constraintTop_toBottomOf="@+id/iv_Bitcoin"
         app:srcCompat="@drawable/eth" />
 
-    <ImageView
-        android:id="@+id/ivDogecoin"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="22dp"
-        app:layout_constraintStart_toStartOf="@+id/coins_bar"
-        app:layout_constraintTop_toBottomOf="@+id/ivEth"
-        app:srcCompat="@drawable/dogecoin" />
-
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/tv_ValueBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -231,11 +256,21 @@
         android:text="0.00941654"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/ivBitcoin"
+        app:layout_constraintStart_toEndOf="@+id/iv_Bitcoin"
         app:layout_constraintTop_toTopOf="@+id/coins_bar" />
 
+    <ImageView
+        android:id="@+id/iv_Dogecoin"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="@+id/coins_bar"
+        app:layout_constraintTop_toBottomOf="@+id/iv_Eth"
+        app:srcCompat="@drawable/dogecoin" />
+
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tv_ValueEth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -244,11 +279,11 @@
         android:text="0.10001325"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/ivEth"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+        app:layout_constraintStart_toEndOf="@+id/iv_Eth"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ValueBitcoin" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tv_ValueDogecoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -257,11 +292,11 @@
         android:text="10,654.21"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/ivDogecoin"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintStart_toEndOf="@+id/iv_Dogecoin"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ValueEth" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/tv_PesosDogecoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -270,11 +305,11 @@
         android:text="₱ 105,631.12"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/ivDogecoin"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintStart_toEndOf="@+id/iv_Dogecoin"
+        app:layout_constraintTop_toBottomOf="@+id/tv_PesosEth" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tv_PesosEth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -283,11 +318,11 @@
         android:text="₱ 48,385.30"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/ivEth"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintStart_toEndOf="@+id/iv_Eth"
+        app:layout_constraintTop_toBottomOf="@+id/tv_PesosBitcoin" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_PesosBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -296,7 +331,7 @@
         android:text="₱ 35,120.22"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/ivBitcoin"
+        app:layout_constraintStart_toEndOf="@+id/iv_Bitcoin"
         app:layout_constraintTop_toTopOf="@+id/coins_bar" />
 
     <ImageView
@@ -307,7 +342,7 @@
         android:layout_marginTop="10dp"
         android:rotation="0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/balance_bar"
+        app:layout_constraintTop_toBottomOf="@+id/V_BalanceSection"
         app:srcCompat="@drawable/arrow"
         tools:ignore="MissingConstraints" />
 
@@ -319,7 +354,7 @@
         android:layout_marginEnd="40dp"
         android:rotation="180"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/balance_bar"
+        app:layout_constraintTop_toBottomOf="@+id/V_BalanceSection"
         app:srcCompat="@drawable/arrow"
         tools:ignore="MissingConstraints" />
 
@@ -334,7 +369,7 @@
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/imageViewarrow2"
-        app:layout_constraintTop_toBottomOf="@+id/balance_bar" />
+        app:layout_constraintTop_toBottomOf="@+id/V_BalanceSection" />
 
     <TextView
         android:id="@+id/textViewSort3"
@@ -347,7 +382,7 @@
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/imageViewarrow3"
-        app:layout_constraintTop_toBottomOf="@+id/balance_bar" />
+        app:layout_constraintTop_toBottomOf="@+id/V_BalanceSection" />
 
 
 </android.support.constraint.ConstraintLayout>

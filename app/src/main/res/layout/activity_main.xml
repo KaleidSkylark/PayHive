@@ -19,8 +19,8 @@
         app:srcCompat="@drawable/payhivelogo" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="346dp"
+        android:layout_height="300dp"
         android:background="@drawable/login_layout_background"
         android:orientation="vertical"
         android:padding="16dp"
@@ -40,7 +40,7 @@
             android:singleLine="true"
             android:textColor="#ffffffff"
             android:textColorHint="#FFFFFF"
-            android:textSize="16sp" />
+            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/InputPassword"
@@ -55,28 +55,29 @@
             android:paddingEnd="16dp"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"
-            android:textSize="16sp" />
+            android:textSize="24sp" />
 
         <CheckBox
             android:id="@+id/showPasswordCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:minHeight="40dp"
             android:text="Show Password"
             android:textColor="#000000" />
 
         <Button
             android:id="@+id/login_button"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/login_button_background"
-            android:elevation="4dp"
+            android:elevation="0dp"
             android:fontFamily="@font/baloo"
             android:marqueeRepeatLimit="marquee_forever"
             android:text="Login"
             android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+            android:textSize="24sp" />
 
     </LinearLayout>
 
