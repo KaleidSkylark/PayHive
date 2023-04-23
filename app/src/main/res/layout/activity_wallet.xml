@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_layout"
@@ -8,32 +8,32 @@
     android:background="@color/Background"
     tools:context=".WalletActivity">
 
-    <android.support.constraint.Group
+    <androidx.constraintlayout.widget.Group
         android:id="@+id/DogecoinGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:constraint_referenced_ids="iv_Dogecoin,tv_ValueDogecoin,tv_PesosDogecoin" />
 
-    <android.support.constraint.Group
+    <androidx.constraintlayout.widget.Group
         android:id="@+id/BitcoinGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:constraint_referenced_ids="iv_Bitcoin,tv_ValueBitcoin,tv_PesosBitcoin" />
 
-    <android.support.constraint.Group
+    <androidx.constraintlayout.widget.Group
         android:id="@+id/EthGroup"
         android:layout_width="9dp"
         android:layout_height="0dp"
         app:constraint_referenced_ids="iv_Eth,tv_ValueEth,tv_PesosEth"
         tools:layout_editor_absoluteY="140dp" />
 
-    <android.support.constraint.Group
+    <androidx.constraintlayout.widget.Group
         android:id="@+id/HeaderGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:constraint_referenced_ids="V_Header,tv_HeaderText,ib_HeaderButton,iv_HeaderPic" />
 
-    <android.support.constraint.Group
+    <androidx.constraintlayout.widget.Group
         android:id="@+id/BalanceGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -385,5 +385,5 @@
         app:layout_constraintTop_toBottomOf="@+id/V_BalanceSection" />
 
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
