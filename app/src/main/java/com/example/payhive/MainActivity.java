@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 // Check if username and password are valid (hardcoded for demonstration purposes)
                 if (username.equals("admin") && password.equals("admin")) {
                     // Credentials are valid, open WalletActivity
-                    startActivity(new Intent(MainActivity.this, WalletActivity.class));
+                    startActivity(new Intent(MainActivity.this, MainLayoutActivity.class));
                 } else {
                     // Show error message
                     Toast.makeText(MainActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();

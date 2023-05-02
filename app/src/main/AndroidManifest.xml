@@ -1,16 +1,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Specify support for all screen densities -->
+    <supports-screens android:anyDensity="true"/>
+    <!-- "@mipmap/ic_launcher" -->
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/payhive_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.PayHive"
         tools:targetApi="31">
-
         <!-- MainActivity -->
         <activity
             android:name=".MainActivity"
@@ -20,18 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- WalletActivity -->
+        <!-- MainLayoutActivity -->
         <activity
-            android:name=".WalletActivity" />
-
-        <!-- StatsActivity -->
-        <activity
-            android:name=".StatsActivity" />
-
-        <!-- SettingsActivity -->
-        <activity
-            android:name=".SettingsActivity" />
+            android:name=".MainLayoutActivity"
+            android:exported="true">
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"

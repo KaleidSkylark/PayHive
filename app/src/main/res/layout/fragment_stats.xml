@@ -2,76 +2,22 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Background"
     tools:context=".StatsActivity">
 
-    <View
-        android:id="@+id/V_Header"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/profile_rectangle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_HeaderText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:fontFamily="@font/baloo"
-        android:text="Statistics"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@id/V_Header"
-        app:layout_constraintStart_toStartOf="@id/V_Header"
-        app:layout_constraintTop_toTopOf="@id/V_Header" />
-
-
-    <ImageButton
-        android:id="@+id/imageButtonBack"
-        android:layout_width="48dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
-        android:background="@android:color/transparent"
-        android:rotation="270"
-        android:scaleType="fitCenter"
-        app:layout_constraintStart_toStartOf="@+id/V_Header"
-        app:layout_constraintTop_toTopOf="@+id/V_Header"
-        app:srcCompat="@drawable/arrow"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <ImageButton
-        android:id="@+id/ib_HeaderButton"
-        android:layout_width="52dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="30dp"
-        android:background="@android:color/transparent"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="@+id/V_Header"
-        app:layout_constraintHorizontal_bias="0.534"
-        app:layout_constraintStart_toEndOf="@+id/tv_HeaderText"
-        app:layout_constraintTop_toTopOf="@+id/V_Header"
-        app:srcCompat="@drawable/profile"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <View
         android:id="@+id/V_BalanceSection"
         android:layout_width="319dp"
         android:layout_height="132dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="28dp"
         android:layout_marginEnd="50dp"
         android:background="@drawable/balance_rectangle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/V_Header" />
-
+        tools:layout_editor_absoluteY="90dp" />
 
     <TextView
         android:id="@+id/tv_TotalBal"
@@ -146,63 +92,8 @@
         app:layout_constraintEnd_toEndOf="@+id/V_BalanceSection"
         app:srcCompat="@drawable/arrow" />
 
-    <RelativeLayout
-        android:id="@+id/navigation_bar"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@drawable/navigation_rectangle"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageButton
-            android:id="@+id/ibWallet"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            android:src="@drawable/wallet"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <ImageButton
-            android:id="@+id/ibStats"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="40dp"
-            android:layout_toEndOf="@id/ibWallet"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            android:src="@drawable/stats"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <ImageButton
-            android:id="@+id/ibDiscover"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="40dp"
-            android:layout_toEndOf="@id/ibStats"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            android:src="@drawable/discover"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <ImageButton
-            android:id="@+id/ibSettings"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="40dp"
-            android:layout_toEndOf="@id/ibDiscover"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            android:src="@drawable/settings"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-    </RelativeLayout>
 
     <ImageView
-        android:id="@+id/imageViewBitconBal"
         android:layout_width="53dp"
         android:layout_height="58dp"
         android:layout_marginStart="8dp"
@@ -212,7 +103,6 @@
         app:srcCompat="@drawable/bitcoin" />
 
     <TextView
-        android:id="@+id/textViewDays"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/baloo"
@@ -225,7 +115,6 @@
         app:layout_constraintTop_toBottomOf="@+id/V_BalanceSection" />
 
     <ImageView
-        android:id="@+id/imageViewChart"
         android:layout_width="317dp"
         android:layout_height="197dp"
         app:layout_constraintBottom_toBottomOf="@+id/stats_bar"
@@ -235,7 +124,6 @@
         app:srcCompat="@drawable/statschart" />
 
     <TextView
-        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -248,7 +136,6 @@
         app:layout_constraintTop_toTopOf="@+id/stats_bar" />
 
     <TextView
-        android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"

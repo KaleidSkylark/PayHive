@@ -2,157 +2,42 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Background"
     tools:context=".WalletActivity">
 
     <androidx.constraintlayout.widget.Group
-        android:id="@+id/DogecoinGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:constraint_referenced_ids="iv_Dogecoin,tv_ValueDogecoin,tv_PesosDogecoin" />
 
     <androidx.constraintlayout.widget.Group
-        android:id="@+id/BitcoinGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:constraint_referenced_ids="iv_Bitcoin,tv_ValueBitcoin,tv_PesosBitcoin" />
 
     <androidx.constraintlayout.widget.Group
-        android:id="@+id/EthGroup"
         android:layout_width="9dp"
         android:layout_height="0dp"
-        app:constraint_referenced_ids="iv_Eth,tv_ValueEth,tv_PesosEth"
-        tools:layout_editor_absoluteY="140dp" />
+        app:constraint_referenced_ids="iv_Eth,tv_ValueEth,tv_PesosEth" />
 
     <androidx.constraintlayout.widget.Group
-        android:id="@+id/HeaderGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="V_Header,tv_HeaderText,ib_HeaderButton,iv_HeaderPic" />
-
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/BalanceGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:constraint_referenced_ids="V_BalanceSection,tv_TotalBal,tv_TotalBalance,tv_BalStonks,iv_BalArrow" />
-    <RelativeLayout
-        android:id="@+id/navigation_bar"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@drawable/navigation_rectangle"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
 
-        <ImageButton
-            android:id="@+id/ibWallet"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            android:src="@drawable/wallet"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <ImageButton
-            android:id="@+id/ibStats"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="40dp"
-            android:layout_toEndOf="@id/ibWallet"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            android:src="@drawable/stats"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <ImageButton
-            android:id="@+id/ibDiscover"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="40dp"
-            android:layout_toEndOf="@id/ibStats"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            android:src="@drawable/discover"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <ImageButton
-            android:id="@+id/ibSettings"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="40dp"
-            android:layout_toEndOf="@id/ibDiscover"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            android:src="@drawable/settings"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-    </RelativeLayout>
-
-
-    <View
-        android:id="@+id/V_Header"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/profile_rectangle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_HeaderText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:fontFamily="@font/baloo"
-        android:text="My Wallet"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@id/V_Header"
-        app:layout_constraintStart_toStartOf="@id/V_Header"
-        app:layout_constraintTop_toTopOf="@id/V_Header" />
-
-    <ImageView
-        android:id="@+id/iv_HeaderPic"
-        android:layout_width="65dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintStart_toStartOf="@id/V_Header"
-        app:layout_constraintTop_toTopOf="@id/V_Header"
-        app:srcCompat="@drawable/profilepic" />
-
-
-    <ImageButton
-        android:id="@+id/ib_HeaderButton"
-        android:layout_width="52dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="30dp"
-        android:background="@android:color/transparent"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="@+id/V_Header"
-        app:layout_constraintHorizontal_bias="0.534"
-        app:layout_constraintStart_toEndOf="@+id/tv_HeaderText"
-        app:layout_constraintTop_toTopOf="@+id/V_Header"
-        app:srcCompat="@drawable/profile"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <View
         android:id="@+id/V_BalanceSection"
         android:layout_width="319dp"
         android:layout_height="132dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:background="@drawable/balance_rectangle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/V_Header" />
+        tools:layout_editor_absoluteY="126dp" />
 
     <TextView
         android:id="@+id/tv_TotalBal"
@@ -359,7 +244,6 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textViewSort"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
@@ -372,7 +256,6 @@
         app:layout_constraintTop_toBottomOf="@+id/V_BalanceSection" />
 
     <TextView
-        android:id="@+id/textViewSort3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"

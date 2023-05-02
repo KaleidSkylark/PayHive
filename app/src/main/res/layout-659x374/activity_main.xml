@@ -19,8 +19,8 @@
         app:srcCompat="@drawable/payhive_logo_front" />
 
     <LinearLayout
-        android:layout_width="314dp"
-        android:layout_height="323dp"
+        android:layout_width="311dp"
+        android:layout_height="313dp"
         android:background="@drawable/login_layout_background"
         android:orientation="vertical"
         android:padding="16dp"
